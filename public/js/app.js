@@ -4,6 +4,9 @@ let closeMenu = document.querySelector("#closeMenu")
 let body = document.querySelector("body")
 let plusBtn = document.querySelectorAll("#plusbtn")
 let box = document.querySelectorAll("#box")
+let minusBtn = document.querySelectorAll("#minusbtn")
+let minusList = document.querySelectorAll("#minuslist")
+
 
 humburgerMenu.addEventListener('click', function () {
     responsiveMenu.classList.remove("-right-full")
@@ -20,5 +23,11 @@ plusBtn.forEach(function (item, index) {
     item.addEventListener('click', function () {
         box[index].classList.toggle("hidden")
         box[index].classList.add("mt-5")
+    })
+})
+
+minusBtn.forEach(function(item , index){
+    item.addEventListener('click' , function(){
+        minusList[index].classList.toggle("hidden")
     })
 })
